@@ -1,0 +1,608 @@
+:root{
+    /* 컬러 */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-navy: #180d5c;
+    --color-yellow: #fecc08;
+    --color-sky: #2992d1;
+    --color-grey: #858585;
+    --color-light-grey: #cacaca;
+
+    /* 폰트 */
+    --font-small: 15px;
+    --font-medium: 20px;
+    --font-reguler: 30px;
+    --font-large: 70px;
+
+    /* spacing */
+    --spacing-small: 12px;
+    --spacing-medium: 35px;
+    --spacing-reguler: 50px;
+    --spacing-large: 100px
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+h4, h2, h3, h1{
+    margin: 0;
+}
+
+/* 헤더 */
+.header{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: var(--font-small);
+    padding: 0 var(--spacing-medium);
+    background-color: var(--color-white);
+}
+
+.header a{
+    color: var(--color-black);
+}
+
+.header__sitemap a{
+    width: 100px;
+    padding: var(--spacing-small) var(--spacing-medium);
+}
+
+.header__sitemap a:hover{
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    font-weight: bold;
+}
+
+.header__icon button{
+    font-size: 18px;
+    line-height: 100%;
+    background-color: var(--color-white);
+    border-radius: 5px;
+}
+
+.header__icon .fa-blogger{
+    color: green;
+}
+
+.header__icon .fa-facebook-square{
+    color: var(--color-navy);
+}
+
+.header__icon .fa-instagram-square{
+    color: orange;
+}
+
+.header__icon .fa-youtube-square{
+    color: red;
+}
+
+/* 메뉴 */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--color-white);
+}
+
+.navbar__main{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--spacing-medium);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: var(--font-medium);
+}
+
+.navbar__sub{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0;
+    top: 70px;
+    background-color: var(--color-white);
+    transition: all 300ms ease-in;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 18px;
+}
+
+.navbar__main li:hover .navbar__sub{
+    display: block;
+}
+
+.navbar__sub ul{
+    display: flex;
+    justify-content: space-around;
+    padding: var(--spacing-medium) 0;
+    text-align: center;
+}
+
+.navbar__sub .title{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: solid 1px var(--color-light-grey);
+}
+
+.navbar__sub img{
+    height: 400px;
+}
+
+.navbar__sub-sub{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__sub-sub li:hover{
+    font-weight: bold;
+}
+
+/* 메인 */
+.main{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__video{
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main__container{
+    width: 80%;
+    height: 350px;
+    top: 75%;
+    position: absolute;
+    background-color: var(--color-yellow);
+}
+
+.main__container-search{
+    margin-top: var(--spacing-medium);
+}
+
+.main__container-search input{
+    width: 700px;
+    height: 75px;
+    border: solid 2px #dbb107;
+    border-radius: 50px;
+    text-align: center;
+    font-size: var(--font-medium);
+    outline: none;
+}
+
+.main__container-search button{
+    font-size: var(--font-reguler);
+    padding-left: var(--spacing-small);
+}
+
+.main__container-icon{
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--spacing-reguler);
+    padding: 0 var(--spacing-large);
+}
+
+.main__container-icon .icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__container-icon .icon i{
+    font-size: var(--font-large);
+    padding-bottom: var(--spacing-small);
+    transition: all 100ms linear;
+}
+
+.main__container-icon .icon i:hover{
+    transform: scale(1.1);
+}
+
+.main__container-icon .icon span{
+    font-size: var(--font-small);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 관광명소 */
+.tour{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 240px;
+    position: relative;
+}
+
+.tour h1{
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: var(--font-large);
+    color: var(--color-navy);
+    margin: 0;
+}
+
+.tour .description{
+    font-size: var(--font-medium);
+    margin-top: var(--spacing-small);
+}
+
+.tour__wrapper{
+    width: 70%;
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+    margin: var(--spacing-medium) auto;
+}
+
+.tour__slide{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: absolute;
+}
+
+.tour__slide li{
+    width: 100%;
+    margin-right: var(--spacing-medium);
+    position: relative;
+}
+
+.tour__slide li:not(:last-child){
+    float: left;
+}
+
+.tour__slide img{
+    height: 430px;
+}
+
+.tour__description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: var(--font-medium);
+    transform: translateY(10px);
+    transition: all 300ms ease-in;
+}
+
+.tour__description button a,
+.tour__description span
+{
+    color: var(--color-white);
+}
+
+.tour__description button{
+    width: 130px;
+    height: 40px;
+    margin: var(--spacing-small) auto;
+    border: solid 1px var(--color-white);
+}
+
+.tour__slide li:hover .tour__description{
+    opacity: 1;
+    background-color: #180d5c80;
+    transform: translateY(0);
+}
+
+.tour__controller{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour__controller .prev,
+.tour__controller .next{
+    font-size: var(--font-large);
+    color: var(--color-yellow);
+}
+
+.tour__controller .prev{
+    padding-left: var(--spacing-large);
+}
+
+.tour__controller .next{
+    padding-right: var(--spacing-large);
+}
+
+/* 홍보영상&공지 */
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
+    margin-top: var(--spacing-large);
+    background-color: var(--color-sky);
+}
+
+.info__left .info__video{
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--color-white);
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.info__left .info__video .title{
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-medium);
+}
+
+.info__left .info__video img{
+    width: 400px;
+}
+
+.info__review{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    margin-top: var(--spacing-small);
+    padding: 0 var(--spacing-small);
+    background-color: var(--color-white);
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.info__right{
+    margin-left: var(--spacing-medium);
+}
+
+.info__right .info__notice, .info__event{
+    width: 400px;
+    height: 200px;
+    background-color: var(--color-white);
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2);
+    padding: var(--spacing-small) var(--spacing-medium);
+}
+
+.info__notice ul, .info__event ul{
+    padding-left: 0;
+}
+
+.info__right .info__notice a, .info__event a{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__right .info__notice h4
+, .info__event h4{
+    font-size: var(--font-medium);
+}
+
+.info__right .info__notice .title
+, .info__event .title{
+    margin-bottom: var(--spacing-small);
+}
+
+.info__right .info__notice .headline,
+.info__event .headline{
+    padding-bottom: var(--spacing-small);
+}
+
+.info__right .info__notice .headline:hover,
+.info__event .headline:hover{
+    color: var(--color-navy);
+}
+
+.info__event{
+    margin-top: var(--spacing-small);
+}
+
+.info .more:hover{
+    transform: scale(1.1);
+}
+
+/* 여행코스 */
+.course{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: var(--spacing-large);
+    position: relative;
+}
+
+.course__title{
+    display: flex;
+    justify-content: center;
+}
+
+.course__title i{
+    font-size: var(--font-large);
+    color: var(--color-navy);
+    padding-right: var(--spacing-small);
+}
+
+.course h1{
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: var(--font-large);
+    color: var(--color-navy);
+    margin: 0;
+}
+
+.course__container{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: var(--spacing-medium) auto;
+}
+
+.course__slide{
+    position: relative;
+}
+
+.course__slide img{
+    width: 800px;
+}
+
+.course__description{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    top: 39%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    opacity: 1;
+    background-color: #00000090;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: var(--font-medium);
+    transition: all 300ms ease-in;
+}
+
+.course__description button a,
+.course__description span
+{
+    color: var(--color-white);
+}
+
+.course__description button{
+    width: 130px;
+    height: 40px;
+    margin: var(--spacing-medium) auto;
+    margin-bottom: 0;
+    border: solid 1px var(--color-white);
+    border-radius: 50px;
+    transition: all 200ms ease-in;
+}
+
+.course__description button:hover{
+    background-color: var(--color-white);
+}
+
+.course__description button:hover a{
+    color: var(--color-black);
+}
+
+.course__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.course__button{
+    margin-top: var(--spacing-small);
+}
+
+.course__button button{
+    font-size: 18px;
+    color: var(--color-light-grey);
+}
+
+.course__button button:hover{
+    color: var(--color-black);
+}
+
+/* 특산물 */
+.local{
+    height: 100%;
+    background: url(imgs/localbackground.jpg) center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-large) var(--spacing-reguler) 0 var(--spacing-reguler);
+}
+
+.local h1{
+    font-size: var(--font-large);
+    font-family: 'East Sea Dokdo', cursive;
+    color: var(--color-white);
+}
+
+.local span{
+    color: var(--color-white);
+    font-size: var(--font-medium);
+}
+
+.local__img{
+    margin: var(--spacing-reguler);
+}
+
+.local__img img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.local__img ul{
+    padding: 0;
+}
+
+.local__img ul li{
+    display: flex;
+}
+
+.local__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-medium);
+}
+
+.local__info span{
+    width: 180px;
+    text-align: center;
+    margin-top: var(--spacing-small);
+    font-weight: bold;
+}
+
+/* 푸터 */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--spacing-large);
+}
+
+.footer img{
+    margin-bottom: var(--spacing-medium);
+}
+
+.footer span{
+    color: var(--color-grey);
+    font-size: var(--font-small);
+}
