@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익산시 문화관광</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header__sitemap">
+            <a href=""><span>익산시청</span></a>
+            <a href=""><span>사이트맵</span></a>
+        </div>
+        <div class="header__icon">
+            <span>KO</span>
+            <span>JA</span>
+            <span>CH</span>
+            <button><a href=""><i class="fab fa-blogger"></i></a></button>
+            <button><a href=""><i class="fab fa-facebook-square"></i></a></button>
+            <button><a href=""><i class="fab fa-instagram-square"></i></a></button>
+            <button><a href=""><i class="fab fa-youtube-square"></i></a></button>
+        </div>
+    </header>
+
+    <!-- 메뉴 -->
+    <nav class="navbar">
+        <ul class="navbar__main">
+            <li><a href=""><img src="imgs/logo.png" alt=""></a></li>
+            <li>
+                <a href="">익산여행</a>
+                <div class="navbar__sub">
+                    <ul>
+                        <li><a href="">관광명소</a></li>
+                        <li><a href="">농촌체험여행</a></li>
+                        <li>
+                            <a href="">익산둘레길</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">함라산길</a></li>
+                                <li><a href="">강변포구길</a></li>
+                                <li><a href="">성당포구길</a></li>
+                                <li><a href="">무왕길</a></li>
+                                <li><a href="">미륵산길</a></li>
+                                <li><a href="">용화산길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">추천코스</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">반나절 코스</a></li>
+                                <li><a href="">하루 코스</a></li>
+                                <li><a href="">1박2일 코스</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">익산시티투어</a>
+                <div class="navbar__sub">
+                    <ul>
+                        <li>
+                            <a href="">시티투어안내</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">테마형 시티투어(예약운행)</a></li>
+                                <li><a href="">순환형 시티투어(상시운행)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">예약확인/취소</a></li>
+                        <li><a href="">관광택시 금강부릉이</a></li>
+                        <li><a href="">전북투어패스</a></li>
+                        <li><a href="">박물관 시티투어 예약</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">익산축제</a>
+                <div class="navbar__sub">
+                    <ul>
+                        <li><a href="">익산서동축제</a></li>
+                        <li><a href="">익산천만송이국화축제</a></li>
+                        <li><a href="">익산보석대축제</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">맛집/숙박/특산물</a>
+                <div class="navbar__sub">
+                    <ul>
+                        <li>
+                            <a href="">맛집</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">음식점현황</a></li>
+                                <li><a href="">대물림맛집</a></li>
+                                <li><a href="">모범음식점</a></li>
+                                <li><a href="">향토음식점</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">숙박</a></li>
+                        <li>
+                            <a href="">특산물</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">탑마루농특산물</a></li>
+                                <li><a href="">가공식품</a></li>
+                                <li><a href="">석공예품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">역사/문화재</a>
+                <div class="navbar__sub">
+                    <ul>
+                        <li>
+                            <a href="">세계유산</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">세계유산이란?</a></li>
+                                <li><a href="">세계유산과 백제문화</a></li>
+                                <li><a href="">백제역사유적지구</a></li>
+                                <li><a href="">왕궁리유적</a></li>
+                                <li><a href="">미룩사지</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">유적따라 이야기따라</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">무왕과 익산백제문화</a></li>
+                                <li><a href="">서동요와 선화공주</a></li>
+                                <li><a href="">마룡지와 서동생가터</a></li>
+                                <li><a href="">오금산과 오금사지</a></li>
+                                <li><a href="">준왕과 익산</a></li>
+                                <li><a href="">마한문화와 익산</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">익산여행가이드</a>
+                <div class="navbar__sub">
+                    <ul>
+                        <li><a href="">공지사항</a></li>
+                        <li>
+                            <a href="">관광안내</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">관광안내소</a></li>
+                                <li><a href="">문화관광해설사 신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">관광자료실</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">관광지도 자료실</a></li>
+                                <li><a href="">홍보동영상 자료실</a></li>
+                                <li><a href="">관광홍보물 신청</a></li>
+                                <li><a href="">관광가이드북</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">여행후기</a>
+                            <ul class="navbar__sub-sub">
+                                <li><a href="">여행후기</a></li>
+                                <li><a href="">스탬프투어 기념품 신청</a></li>
+                                <li><a href="">관광홍보물 신청</a></li>
+                                <li><a href="">관광가이드북</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 메인 -->
+    <section class="main">
+        <div class="main__video">
+            <video src="video/video.mp4" autoplay muted></video>
+        </div>
+        <div class="main__container">
+            <div class="main__container-search">
+                <input type="search">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="main__container-icon">
+                <button class="icon">
+                    <i class="fas fa-bus"></i>
+                    <span>시티투어 안내</span>
+                </button>
+                <button class="icon">
+                    <i class="far fa-bookmark"></i>
+                    <span>관광홍보물 신청</span>
+                </button>
+                <button class="icon">
+                    <i class="far fa-map"></i>
+                    <span>스마트관광 전자지도</span>
+                </button>
+                <button class="icon">
+                    <i class="far fa-map"></i>
+                    <span>관광명소</span>
+                </button>
+                <button class="icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>추천코스</span>
+                </button>
+                <button class="icon">
+                    <i class="far fa-comments"></i>
+                    <span>문화관광해설사 신청</span>
+                </button>
+                <button class="icon">
+                    <i class="fas fa-gift"></i>
+                    <span>스탬프투어 기념품</span>
+                </button>
+                <button class="icon">
+                    <i class="fas fa-map-signs"></i>
+                    <span>전북투어패스</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 관광명소 -->
+    <section class="tour">
+        <h2>관광명소</h2>
+        <span>익산시의 다양한 관광명소를 소개합니다</span>
+        <div class="tour__wrapper">
+            <ul class="tour__slide">
+                <li><a href="">
+                    <img src="imgs/tour.jpg" alt="">
+                    <div class="tour__description">
+                        <span>박물관</span>
+                        <button><a href="">자세히 보기</a></button>
+                    </div>
+                </a></li>
+                <li><a href="">
+                    <img src="imgs/tour2.jpg" alt="">
+                    <div class="tour__description">
+                        <span>드라마세트장</span>
+                        <button><a href="">자세히 보기</a></button>
+                    </div>
+                </a></li>
+                <li><a href="">
+                    <img src="imgs/tour3.jpg" alt="">
+                    <div class="tour__description">
+                        <span>공원/유원시설</span>
+                        <button><a href="">자세히 보기</a></button>
+                    </div>
+                </a></li>
+                <li><a href="">
+                    <img src="imgs/tour4.jpg" alt="">
+                    <div class="tour__description">
+                        <span>전통시장</span>
+                        <button><a href="">자세히 보기</a></button>
+                    </div>
+                </a></li>
+                <li><a href="">
+                    <img src="imgs/tour5.jpg" alt="">
+                    <div class="tour__description">
+                        <span>유적지</span>
+                        <button><a href="">자세히 보기</a></button>
+                    </div>
+                </a></li>
+                <li><a href="">
+                    <img src="imgs/tour6.jpg" alt="">
+                    <div class="tour__description">
+                        <span>농촌체험시설</span>
+                        <button><a href="">자세히 보기</a></button>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="tour__controller">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- 홍보영상+공지 -->
+    <section class="info">
+        <div class="info__left">
+            <div class="info__video">
+                <h4>홍보영상</h4>
+                <button class="more"><i class="fas fa-plus"></i></button>
+                <img src="imgs/video.jpg" alt="">
+            </div>
+            <div class="info__review">
+                <h4>여행후기</h4>
+                <button class="more"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="info__right">
+            <div class="info__notice">
+                <ul>
+                    <li><a href="">
+                        <h4>공지사항</h4>
+                        <button class="more"><i class="fas fa-plus"></i></button>
+                    </a></li>
+                    <li><a href="">
+                        <span class="title">익산시 교도소 세트장 관람 제한</span>
+                        <span>2020-12-02</span>
+                    </a></li>
+                    <li><a href="">
+                        <span class="title">익산시 교도소 세트장 관람 제한</span>
+                        <span>2020-12-02</span>
+                    </a></li>
+                    <li><a href="">
+                        <span class="title">익산시 교도소 세트장 관람 제한</span>
+                        <span>2020-12-02</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="info__event">
+                <ul>
+                    <li><a href="">
+                        <h4>행사안내</h4>
+                        <button class="more"><i class="fas fa-plus"></i></button>
+                    </a></li>
+                    <li><a href=""><span class="title">익산시 교도소 세트장 관람 제한</span></a></li>
+                    <li><a href=""><span class="title">익산시 교도소 세트장 관람 제한</span></a></li>
+                    <li><a href=""><span class="title">익산시 교도소 세트장 관람 제한</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 여행코스 -->
+    <section class="course">
+        <div class="course__title">
+            <i class="fas fa-map-marked-alt"></i>
+            <h2>여행 추천 코스</h2>
+        </div>
+        <div class="course__left">
+            <a href="" class="course-img">
+                <img src="imgs/course.jpg" alt="">
+                <div class="course__description">
+                    <span>익산왕릉-왕궁리 유적-보석박물관-미륵사지-입정리고분</span>
+                    <button><a>자세히 보기</a></button>
+                </div>
+            </a>
+        </div>
+        <div class="course__right">
+            <h3>반나절 코스</h3>
+            <span>익산의 대표 관광지를 빠르게 볼 수 있는 코스입니다</span>
+            <div class="course__controller">
+                <button><i class="fas fa-chevron-left"></i></button>
+                <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 특산물 -->
+    <section class="local">
+        <h2>익산 특산물</h2>
+        <span>익산시만의 다양한 제품들을 둘러보세요</span>
+        <div class="local__img">
+            <ul>
+                <li>
+                    <div class="local__info">
+                        <img src="imgs/local.jpg" alt="">
+                        <span>서동마 수연소면</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local2.jpg" alt="">
+                        <span>용산찹쌀엿</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local3.jpg" alt="">
+                        <span>전통한과</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local4.jpg" alt="">
+                        <span>유기농쌀과자</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local5.jpg" alt="">
+                        <span>유기농전통장(고스락)</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/loca6.jpg" alt="">
+                        <span>자색고구마쌀막걸리</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="local__info">
+                        <img src="imgs/loca7.jpg" alt="">
+                        <span>동그라미플러스</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local8.jpg" alt="">
+                        <span>떠먹는 군고구마 스위트미</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local9.jpg" alt="">
+                        <span>고사리아주맘 황토 편강</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local10.jpg" alt="">
+                        <span>(주)미들채 제품</span>
+                    </div>
+                    <div class="local__info">
+                        <img src="imgs/local11.jpg" alt="">
+                        <span>청울외 장아찌</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <img src="imgs/logo.png" alt="">
+        <span>54622 전라북도 익산시 인북로32길 1 (남중동) l 대표전화 : 1577-0072</span>
+        <span>Copyright(c) 2015 IKSAN CITY. All rights Reserved.</span>
+    </footer>
+</body>
+</html>
