@@ -280,6 +280,7 @@ h4, h2, h3, h1{
     padding: 0;
     top: 0;
     position: absolute;
+    transition: all 600ms linear;
 }
 
 .tour__slide li{
