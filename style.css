@@ -147,10 +147,6 @@ h4, h2, h3, h1{
     border: solid 1px var(--color-light-grey);
 }
 
-.navbar__sub img{
-    height: 400px;
-}
-
 .navbar__sub-sub{
     display: flex;
     flex-direction: column;
@@ -605,4 +601,276 @@ h4, h2, h3, h1{
 .footer span{
     color: var(--color-grey);
     font-size: var(--font-small);
+}
+
+/* 반응형 */
+@media screen and (max-width: 760px){
+    .header{
+        display: none;
+    }
+    
+    /* 메뉴 */
+    .navbar{
+        width: 70%;
+        height: 100%;
+        display: none;
+    }
+
+    .navbar__main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar__main .logo{
+        margin: var(--spacing-medium) 0;
+    }
+
+    .navbar__main li{
+        padding-bottom: var(--spacing-medium);
+    }
+
+    .navbar__sub ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .navbar__sub .title{
+        width: 100%;
+        border: none;
+    }
+
+    .navbar__sub-sub{
+        opacity: 0;
+    }
+
+    /* 메인 */
+    .main__video{
+        display: none;
+    }
+
+    .main__container{
+        margin-top: var(--spacing-small);
+        padding-bottom: var(--spacing-small);
+        background-color: var(--color-white);
+    }
+    
+    .main__container-search input{
+        width: 60%;
+        height: 40px;
+        font-size: var(--font-small);
+        border: var(--color-black) solid 2px;
+    }
+
+    .main__container-search button{
+        font-size: var(--font-medium);
+    }
+
+    .main__container-icon{
+        justify-content: flex-start;
+        padding: 0 var(--spacing-small);
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .main__container-icon::-webkit-scrollbar{
+        display: none;
+    }
+
+    .main__container-icon .icon{
+        margin-right: var(--spacing-small);
+    }
+
+    .main__container-icon .icon i{
+        font-size: 25px;
+        padding-bottom: var(--spacing-small);
+    }
+
+    .main__container-icon .icon span{
+        width: 65px;
+    }
+
+    .main__container-icon .icon i:hover{
+        transform: none;
+    }
+
+    /* 관광명소 */
+    .tour{
+        margin-top: 300px;
+    }
+
+    .tour h1{
+        font-size: 45px;
+    }
+
+    .tour .description{
+        font-size: var(--font-small);
+        margin-top: 5px;
+    }
+
+    .tour__wrapper{
+        width: 80%;
+        height: 250px;
+        position: relative;
+    }
+
+    .tour__slide li{
+        margin-right: var(--spacing-small);
+    }
+
+    .tour__slide img{
+        height: 250px;
+    }
+
+    .tour__description{
+        font-size: var(--font-small);
+    }
+
+    .tour__description button{
+        width: 100px;
+        height: 30px;
+    }
+
+    .tour__controller{
+        top: 55%;
+    }
+
+    .tour__controller .prev,
+    .tour__controller .next{
+        font-size: var(--font-reguler);
+    }
+
+    .tour__controller .prev{
+        padding-left: 10px;
+    }
+
+    .tour__controller .next{
+        padding-right: 10px;
+    }
+
+    /* 홍보영상&공지 */
+    .info{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: var(--spacing-medium);
+        padding: var(--spacing-medium) 0;
+    }
+
+    .info__left .info__video{
+        justify-content: space-around;
+    }
+
+    .info__left .info__video .title{
+        font-size: var(--font-small);
+    }
+
+    .info__review{
+        height: 50px;
+        font-size: var(--font-small);
+    }
+
+    .info__right{
+        margin: var(--spacing-small) auto;
+    }
+
+    .info__right .info__notice, .info__event{
+        width: 330px;
+        height: 200px;
+        padding: var(--spacing-small) var(--spacing-medium);
+    }
+
+    .info__right .info__notice h4
+    , .info__event h4{
+        font-size: var(--font-small);
+    }
+
+    /* 여행코스 */
+    .course{
+        margin-top: var(--spacing-reguler);
+    }
+
+    .course__title i{
+        font-size: 40px;
+        padding-right: var(--spacing-small);
+    }
+
+    .course h1{
+        font-size: 40px;
+    }
+
+    .course__container{
+        width: 80%;
+        margin: var(--spacing-small) auto;
+    }
+
+    .course__slide img{
+        width: 100%;
+    }
+
+    .course__description{
+        top: 49%;
+        height: 50%;
+        font-size: var(--font-small);
+    }
+
+    .course__description button{
+        width: 100px;
+        height: 30px;
+        margin: var(--spacing-small) auto;
+    }
+
+    .course__button button{
+        font-size: var(--font-small);
+    }
+
+    /* 특산물 */
+    .local{
+        margin-top: var(--spacing-medium);
+        padding: var(--spacing-reguler) var(--spacing-reguler) 0 var(--spacing-reguler);
+    }
+
+    .local h1{
+        font-size: 40px;
+    }
+
+    .local span{
+        font-size: var(--font-small);
+    }
+
+    .local__img{
+        margin: var(--spacing-small);
+    }
+
+    .local__img img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .local__info{
+        padding: var(--spacing-small);
+    }
+
+    .local__info span{
+        width: 60px;
+    }
+
+    
+    /* 푸터 */
+    .footer{
+        text-align: center;
+        margin: var(--spacing-reguler);
+    }
+
+    .footer img{
+        width: 200px;
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .footer span{
+        font-size: 13px;
+    }
 }
