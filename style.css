@@ -132,7 +132,7 @@ h4, h2, h3, h1{
 }
 
 .navbar__sub{
-    display: none;
+    visibility: hidden;
     position: absolute;
     width: 100%;
     height: 400px;
@@ -142,10 +142,13 @@ h4, h2, h3, h1{
     transition: all 300ms ease-in;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 18px;
+    transform: translateY(-30px);
+    transition: transform 300ms linear;
 }
 
-.navbar__main li:hover .navbar__sub{
-    display: block;
+.navbar__sub.show{
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .navbar__sub ul{
