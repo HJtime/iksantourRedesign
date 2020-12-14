@@ -2,41 +2,24 @@
 
 // 헤더
 const navbar=document.querySelector('.navbar');
+const topbar=document.querySelector('.topbar');
 const header=document.querySelector('.header');
-const headerHegiht=header.clientHeight;
+const topbarHegiht=topbar.clientHeight;
 
 window.addEventListener('scroll', ()=>{
     const scrolling=window.pageYOffset;
 
-    if(scrolling>headerHegiht){
-        header.classList.add('invisible');
+    if(scrolling>topbarHegiht){
+        topbar.classList.add('invisible');
         navbar.classList.add('invisible');
+        header.classList.add('invisible');
     }
 
-    if(scrolling<headerHegiht){
-        header.classList.remove('invisible');
+    if(scrolling<topbarHegiht){
+        topbar.classList.remove('invisible');
         navbar.classList.remove('invisible');
+        header.classList.remove('invisible');
     }
-});
-
-// 서브메뉴
-const subMenu=document.querySelectorAll('.navbar__sub');
-
-navbar.addEventListener('mouseover', (event)=>{
-    const filter=event.target.dataset.num || event.target.parentNode.dataset.num;
-
-    if(filter===null){
-        return;
-    }
-
-    subMenu.forEach((sub)=>{
-        if(filter===sub.dataset.sub){
-            sub.classList.toggle('show');
-        }
-        else{
-            sub.classList.remove('show');
-        }
-    })
 });
 
 // 관광명소 슬라이드
@@ -72,3 +55,25 @@ prevBtn.addEventListener('click',function(){
         moveSlide(slideCount-4);
     }
 });
+
+// 여행코스
+const courseImg=document.querySelector('.course-img img');
+const para=document.querySelector('.course__description');
+let imgcount=0;
+const txt1="익산왕릉-왕궁리 유적-보석박물관-미륵사지-입정리고분";
+const txt2="어쩌구";
+const txt3="저쩌구";
+
+
+function changeImg(){
+    if(imgcount<3){
+        imgcount++;
+        courseImg.setAttribute("src", "imgs/course"+imgcount+".jpg");
+    }else if(imgcount>2){
+        imgcount=0;
+    }    
+}
+
+const imgtimer=setInterval(function(){
+    changeImg();
+}, 2500)

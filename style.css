@@ -47,130 +47,145 @@ h4, h2, h3, h1{
     margin: 0;
 }
 
-/* 헤더 */
+
 .header{
-    height: 45px;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    color: var(--color-white);
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: var(--font-small);
-    padding: 0 var(--spacing-medium);
-    background-color: var(--color-white);
+    padding-top: 20px;
     position: fixed;
-    z-index: 7;
+    z-index: 999;
+    background-color: var(--color-white);
 }
 
 .header.invisible{
+    padding-top: var(--spacing-small);
+}
+
+.header ul{
+    padding: 0;
+}
+
+.topbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.topbar.invisible{
     display: none;
 }
 
-.header a{
-    color: var(--color-black);
-}
-
-.header__sitemap a{
-    width: 100px;
-    padding: var(--spacing-small) var(--spacing-medium);
-}
-
-.header__sitemap a:hover{
-    background-color: var(--color-yellow);
-    color: var(--color-black);
-    font-weight: bold;
-}
-
-.header__icon button{
-    font-size: 18px;
-    line-height: 100%;
-    background-color: var(--color-white);
-    border-radius: 5px;
-}
-
-.header__icon .fa-blogger{
-    color: green;
-}
-
-.header__icon .fa-facebook-square{
-    color: var(--color-navy);
-}
-
-.header__icon .fa-instagram-square{
-    color: orange;
-}
-
-.header__icon .fa-youtube-square{
-    color: red;
-}
-
-/* 메뉴 */
-.navbar{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.topbar__sitemap ul{
     width: 100%;
-    z-index: 1;
-    height: 150px;
-    background-color: var(--color-white);
-    transition: all 300ms ease-in;
-}
-
-.navbar.invisible{
-    top: -45px;
-}
-
-.navbar__main{
-    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--spacing-medium);
-    font-family: 'Noto Sans KR', sans-serif;
+    padding-left: var(--spacing-medium);
+    font-size: var(--font-small);
+}
+
+.topbar__sns ul{
+    display: flex;
+    padding-right: var(--spacing-medium);
+}
+
+.topbar__sns ul li{
+    padding-right: var(--spacing-small);
+}
+
+.topbar__sns ul li a{
     font-size: var(--font-medium);
 }
 
-.navbar__sub{
+.topbar__sns .fa-blogger{
+    color: green;
+}
+
+.topbar__sns .fa-instagram-square{
+    color: rgb(224, 147, 4);
+}
+
+.topbar__sns .fa-facebook-square{
+    color: var(--color-navy);
+}
+
+.topbar__sns .fa-youtube-square{
+    color: red;
+}
+
+/* nav */
+.navbar{
+    margin-top: var(--spacing-small);
+    width: 100%;
+    position: relative;
+}
+
+.navbar.invisible{
+    margin-top: 0;
+}
+
+.navbar .inner ul{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: var(--spacing-small);
+}
+
+.navbar .inner ul a{
+    font-size: var(--font-medium);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.navbar .inner .name{
+    width: 200px;
+    height: 40px;
+    border: solid 1px var(--color-light-grey);
+    line-height: 40px;
+}
+
+.navbar .sub__menu{
     visibility: hidden;
     position: absolute;
     width: 100%;
-    height: 400px;
+    height: 330px;
+    padding: var(--spacing-medium) 0;
     left: 0;
-    top: 70px;
-    background-color: var(--color-white);
-    transition: all 300ms ease-in;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 18px;
-    transform: translateY(-30px);
-    transition: transform 300ms linear;
+    top: 60px;
+    text-align: center;
+    background-color: white;
+    transition: all 300ms linear;
+    transform: translateY(-20px);
+    border-bottom: solid 2px var(--color-grey);
 }
 
-.navbar__sub.show{
+.navbar .inner ul li:hover .sub__menu{
     visibility: visible;
     transform: translateY(0);
 }
 
-.navbar__sub ul{
+.sub__menu .inner .link ul{
     display: flex;
     justify-content: space-around;
-    padding: var(--spacing-medium) 0;
-    text-align: center;
 }
 
-.navbar__sub .title{
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    border: solid 1px var(--color-light-grey);
+.sub__menu .inner .link ul a{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 18px;
 }
 
-.navbar__sub-sub{
+.inner .link ul .link__sub{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: var(--spacing-medium);
 }
 
-.navbar__sub-sub li:hover{
+.link__sub li{
+    line-height: 40px;
+}
+
+.link__sub li:hover{
     font-weight: bold;
 }
 

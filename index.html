@@ -11,168 +11,210 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <!-- 헤더 -->
     <header class="header">
-        <div class="header__sitemap">
-            <a href="">익산시청</a>
-            <a href="">사이트맵</a>
+        <div class="topbar">
+            <div class="topbar__sitemap">
+                <ul>
+                    <li><a href="">익산시청</a></li>
+                    <li><a href="">사이트맵</a></li>
+                </ul>
+            </div>
+            <div class="topbar__logo"><a href=""><img src="imgs/logo.png" alt=""></a></div>
+            <div class="topbar__sns">
+                <ul>
+                    <li><button><a href=""><i class="fab fa-blogger"></i></a></button></li>
+                    <li><button><a href=""><i class="fab fa-facebook-square"></i></a></button></li>
+                    <li><button><a href=""><i class="fab fa-instagram-square"></i></a></button></li>
+                    <li><button><a href=""><i class="fab fa-youtube-square"></i></a></button></li>
+                </ul>
+            </div>
         </div>
-        <div class="header__icon">
-            <button><a href=""><i class="fab fa-blogger"></i></a></button>
-            <button><a href=""><i class="fab fa-facebook-square"></i></a></button>
-            <button><a href=""><i class="fab fa-instagram-square"></i></a></button>
-            <button><a href=""><i class="fab fa-youtube-square"></i></a></button>
+        <div class="navbar">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <a href="">익산여행</a>
+                        <div class="sub__menu">
+                            <div class="inner">
+                                <div class="menu1">
+                                    <div class="link">
+                                        <ul>
+                                            <li class="name"><a href="">관광명소</a></li>
+                                            <li class="name"><a href="">농촌체험여행</a></li>
+                                            <li class="name">
+                                                <a href="">익산둘레길</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">함라산길</a></li>
+                                                    <li><a href="">강변포구길</a></li>
+                                                    <li><a href="">성당포구길</a></li>
+                                                    <li><a href="">무왕길</a></li>
+                                                    <li><a href="">미륵산길</a></li>
+                                                    <li><a href="">용화산길</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="name">
+                                                <a href="">추천코스</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">반나절 코스</a></li>
+                                                    <li><a href="">하루 코스</a></li>
+                                                    <li><a href="">1박2일 코스</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">익산시티투어</a>
+                        <div class="sub__menu">
+                            <div class="inner">
+                                <div class="menu2">
+                                    <div class="link">
+                                        <ul>
+                                            <li class="name">
+                                                <a href="">시티투어안내</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">테마형 시티투어</a></li>
+                                                    <li><a href="">순환형 시티투어</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="name"><a href="">예약확인/취소</a></li>
+                                            <li class="name"><a href="">관광택시 금강부릉이</a></li>
+                                            <li class="name"><a href="">전북투어패스</a></li>
+                                            <li class="name"><a href="">박물관 시티투어 예약</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">익산축제</a>
+                        <div class="sub__menu">
+                            <div class="inner">
+                                <div class="menu3">
+                                    <div class="link">
+                                        <ul>
+                                            <li class="name"><a href="">익산서동축제</a></li>
+                                            <li class="name"><a href="">익산천만송이국화축제</a></li>
+                                            <li class="name"><a href="">익산보석대축제</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">맛집/숙박/특산물</a>
+                        <div class="sub__menu">
+                            <div class="inner">
+                                <div class="menu4">
+                                    <div class="link">
+                                        <ul>
+                                            <li class="name">
+                                                <a href="">맛집</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">음식점현황</a></li>
+                                                    <li><a href="">대물림맛집</a></li>
+                                                    <li><a href="">모범음식점</a></li>
+                                                    <li><a href="">향토음식점</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="name"><a href="">숙박</a></li>
+                                            <li class="name">
+                                                <a href="">특산물</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">탑마루농특산물</a></li>
+                                                    <li><a href="">가공식품</a></li>
+                                                    <li><a href="">석공예품</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">역사/문화재</a>
+                        <div class="sub__menu">
+                            <div class="inner">
+                                <div class="menu5">
+                                    <div class="link">
+                                        <ul>
+                                            <li class="name">
+                                                <a href="">세계유산</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">세계유산이란?</a></li>
+                                                    <li><a href="">세계유산과 백제문화</a></li>
+                                                    <li><a href="">백제역사유적지구</a></li>
+                                                    <li><a href="">왕궁리유적</a></li>
+                                                    <li><a href="">미룩사지</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="name"><a href="">유적따라 이야기따라</a></li>
+                                            <li class="name">
+                                                <a href="">익산둘레길</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">무왕과 익산백제문화</a></li>
+                                                    <li><a href="">서동요와 선화공주</a></li>
+                                                    <li><a href="">마룡지와 서동생가터</a></li>
+                                                    <li><a href="">오금산과 오금사지</a></li>
+                                                    <li><a href="">준왕과 익산</a></li>
+                                                    <li><a href="">마한문화와 익산</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">익산여행가이드</a>
+                        <div class="sub__menu">
+                            <div class="inner">
+                                <div class="menu6">
+                                    <div class="link">
+                                        <ul>
+                                            <li class="name"><a href="">공지사항</a></li>
+                                            <li class="name">
+                                                <a href="">관광안내</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">관광안내소</a></li>
+                                                    <li><a href="">문화관광해설사 신청</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="name">
+                                                <a href="">관광자료실</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">관광지도 자료실</a></li>
+                                                    <li><a href="">홍보동영상 자료실</a></li>
+                                                    <li><a href="">관광홍보물 신청</a></li>
+                                                    <li><a href="">관광가이드북</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="name">
+                                                <a href="">여행후기</a>
+                                                <ul class="link__sub">
+                                                    <li><a href="">여행후기</a></li>
+                                                    <li><a href="">스탬프투어 기념품 신청</a></li>
+                                                    <li><a href="">관광홍보물 신청</a></li>
+                                                    <li><a href="">관광가이드북</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
-
-    <!-- 메뉴 -->
-    <nav class="navbar">
-        <ul class="navbar__main">
-            <li class="logo"><a href=""><img src="imgs/logo.png" alt=""></a></li>
-            <li data-num="1">
-                <a href="">익산여행</a>
-                <div class="navbar__sub" data-sub="1">
-                    <ul>
-                        <li class="title"><a href="">관광명소</a></li>
-                        <li class="title"><a href="">농촌체험여행</a></li>
-                        <li class="title">
-                            <a href="">익산둘레길</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">함라산길</a></li>
-                                <li><a href="">강변포구길</a></li>
-                                <li><a href="">성당포구길</a></li>
-                                <li><a href="">무왕길</a></li>
-                                <li><a href="">미륵산길</a></li>
-                                <li><a href="">용화산길</a></li>
-                            </ul>
-                        </li>
-                        <li class="title">
-                            <a href="">추천코스</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">반나절 코스</a></li>
-                                <li><a href="">하루 코스</a></li>
-                                <li><a href="">1박2일 코스</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li data-num="2">
-                <a href="">익산시티투어</a>
-                <div class="navbar__sub" data-sub="2">
-                    <ul>
-                        <li class="title">
-                            <a href="">시티투어안내</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">테마형 시티투어</a></li>
-                                <li><a href="">순환형 시티투어</a></li>
-                            </ul>
-                        </li>
-                        <li class="title"><a href="">예약확인/취소</a></li>
-                        <li class="title"><a href="">관광택시 금강부릉이</a></li>
-                        <li class="title"><a href="">전북투어패스</a></li>
-                        <li class="title"><a href="">박물관 시티투어 예약</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li data-num="3">
-                <a href="">익산축제</a>
-                <div class="navbar__sub" data-sub="3">
-                    <ul>
-                        <li class="title"><a href="">익산서동축제</a></li>
-                        <li class="title"><a href="">익산천만송이국화축제</a></li>
-                        <li class="title"><a href="">익산보석대축제</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li data-num="4">
-                <a href="">맛집/숙박/특산물</a>
-                <div class="navbar__sub" data-sub="4">
-                    <ul>
-                        <li class="title">
-                            <a href="">맛집</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">음식점현황</a></li>
-                                <li><a href="">대물림맛집</a></li>
-                                <li><a href="">모범음식점</a></li>
-                                <li><a href="">향토음식점</a></li>
-                            </ul>
-                        </li>
-                        <li class="title"><a href="">숙박</a></li>
-                        <li class="title">
-                            <a href="">특산물</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">탑마루농특산물</a></li>
-                                <li><a href="">가공식품</a></li>
-                                <li><a href="">석공예품</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li data-num="5">
-                <a href="">역사/문화재</a>
-                <div class="navbar__sub" data-sub="5">
-                    <ul>
-                        <li class="title">
-                            <a href="">세계유산</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">세계유산이란?</a></li>
-                                <li><a href="">세계유산과 백제문화</a></li>
-                                <li><a href="">백제역사유적지구</a></li>
-                                <li><a href="">왕궁리유적</a></li>
-                                <li><a href="">미룩사지</a></li>
-                            </ul>
-                        </li>
-                        <li class="title">
-                            <a href="">유적따라 이야기따라</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">무왕과 익산백제문화</a></li>
-                                <li><a href="">서동요와 선화공주</a></li>
-                                <li><a href="">마룡지와 서동생가터</a></li>
-                                <li><a href="">오금산과 오금사지</a></li>
-                                <li><a href="">준왕과 익산</a></li>
-                                <li><a href="">마한문화와 익산</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li data-num="6">
-                <a href="">익산여행가이드</a>
-                <div class="navbar__sub" data-sub="6">
-                    <ul>
-                        <li class="title"><a href="">공지사항</a></li>
-                        <li class="title">
-                            <a href="">관광안내</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">관광안내소</a></li>
-                                <li><a href="">문화관광해설사 신청</a></li>
-                            </ul>
-                        </li>
-                        <li class="title">
-                            <a href="">관광자료실</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">관광지도 자료실</a></li>
-                                <li><a href="">홍보동영상 자료실</a></li>
-                                <li><a href="">관광홍보물 신청</a></li>
-                                <li><a href="">관광가이드북</a></li>
-                            </ul>
-                        </li>
-                        <li class="title">
-                            <a href="">여행후기</a>
-                            <ul class="navbar__sub-sub">
-                                <li><a href="">여행후기</a></li>
-                                <li><a href="">스탬프투어 기념품 신청</a></li>
-                                <li><a href="">관광홍보물 신청</a></li>
-                                <li><a href="">관광가이드북</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
 
     <!-- 메인 -->
     <section class="main">
@@ -341,17 +383,17 @@
         <div class="course__container">
             <div class="course__slide">
                 <a href="" class="course-img">
-                    <img src="imgs/course.jpg" alt="">
+                    <img src="imgs/course1.jpg" alt="">
                     <div class="course__description">
-                        <span>익산왕릉-왕궁리 유적-보석박물관-미륵사지-입정리고분</span>
+                        <span></span>
                         <button><a>자세히 보기</a></button>
                     </div>
                 </a>
             </div>
             <div class="course__button">
-                <button class="slidebtn"><i class="fas fa-circle"></i></button>
-                <button class="slidebtn"><i class="fas fa-circle"></i></button>
-                <button class="slidebtn"><i class="fas fa-circle"></i></button>
+                <button class="slidebtn" data-slide="1"><i class="fas fa-circle"></i></button>
+                <button class="slidebtn" data-slide="2"><i class="fas fa-circle"></i></button>
+                <button class="slidebtn" data-slide="3"><i class="fas fa-circle"></i></button>
             </div>
         </div>
     </section>
