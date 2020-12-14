@@ -23,20 +23,20 @@ window.addEventListener('scroll', ()=>{
 });
 
 // 관광명소 슬라이드
-const slides=document.querySelector('.tour__slide');
-const slide=document.querySelectorAll('.tour__slide li');
+const tourSlides=document.querySelector('.tour__slide');
+const tourSlide=document.querySelectorAll('.tour__slide li');
 const slideImg=document.querySelector('.tour__slide li');
 let currentIdx=0;
-let slideCount=slide.length;
+let slideCount=tourSlide.length;
 const prevBtn=document.querySelector('.tour__controller .prev');
 const nextBtn=document.querySelector('.tour__controller .next');
 let slidesWidth=slideImg.clientWidth;
 let slideMargin=35;
 
-slides.style.width=(slidesWidth+slideMargin)*slideCount-slideMargin+'px';
+tourSlides.style.width=(slidesWidth+slideMargin)*slideCount-slideMargin+'px';
 
 function moveSlide(num){
-    slides.style.left=-num*(slidesWidth+slideMargin)+'px';
+    tourSlides.style.left=-num*(slidesWidth+slideMargin)+'px';
     currentIdx=num;
 }
 
@@ -57,23 +57,57 @@ prevBtn.addEventListener('click',function(){
 });
 
 // 여행코스
-const courseImg=document.querySelector('.course-img img');
-const para=document.querySelector('.course__description');
-let imgcount=0;
-const txt1="익산왕릉-왕궁리 유적-보석박물관-미륵사지-입정리고분";
-const txt2="어쩌구";
-const txt3="저쩌구";
+
+const slides = document.querySelectorAll('.slides');
+const dots =  document.querySelectorAll('.dots');
+let slideIndex = 0;
+
+let myVar;
 
 
-function changeImg(){
-    if(imgcount<3){
-        imgcount++;
-        courseImg.setAttribute("src", "imgs/course"+imgcount+".jpg");
-    }else if(imgcount>2){
-        imgcount=0;
-    }    
+showSlides();
+
+function showSlides(){
+    for(var i=0; i<slides.length; i++){
+        slides[i].style.display = 'none';
+        dots[i].setAttribute('class', '');
+    }
+    
+    slideIndex++;
+
+    if(slideIndex > slides.length){
+        slideIndex = 1;
+    }
+
+    slides[slideIndex-1].style.display = 'block';
+    dots[slideIndex-1].setAttribute('class', 'on');
+
+    myVar = setTimeout(showSlides, 2000);
+}//showSlides
+
+
+function stopSlide(){
+    clearTimeout(myVar);
+} //stopSlide
+
+const dotsBox=document.querySelector('.dotContainer');
+
+dotsBox.addEventListener('click', (event)=>{
+    const filter=event.target.dataset.current || event.target.parentNode.dataset.current;
+
+    currentSlide(filter);
+})
+
+/* ========= */
+function currentSlide(num){
+    stopSlide();
+    slideIndex = num;
+
+    for(var i=0; i<slides.length; i++){
+        slides[i].style.display = 'none';
+        dots[i].setAttribute('class', '');
+    }
+    
+    slides[slideIndex - 1 ].style.display = 'block';
+    dots[slideIndex - 1 ].setAttribute('class', 'on');
 }
-
-const imgtimer=setInterval(function(){
-    changeImg();
-}, 2500)
