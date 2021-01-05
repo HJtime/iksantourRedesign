@@ -23,37 +23,53 @@ window.addEventListener('scroll', ()=>{
 });
 
 // 관광명소 슬라이드
-const tourSlides=document.querySelector('.tour__slide');
-const tourSlide=document.querySelectorAll('.tour__slide li');
-const slideImg=document.querySelector('.tour__slide li');
-let currentIdx=0;
-let slideCount=tourSlide.length;
-const prevBtn=document.querySelector('.tour__controller .prev');
-const nextBtn=document.querySelector('.tour__controller .next');
-let slidesWidth=slideImg.clientWidth;
-let slideMargin=35;
+const tourWrapper=document.querySelector('.tour__wrapper');
+const tourSlides=document.querySelectorAll('.tour__slides');
+const tourSlidez=document.querySelector('.tour__slides');
+const tourSlide=document.querySelector('.tour__slide');
+const tourtotal=tourSlides.length;
 
-tourSlides.style.width=(slidesWidth+slideMargin)*slideCount-slideMargin+'px';
+let tourWidth=tourSlidez.clientWidth;
+// let mainWidth=mainWrapper.clientWidth;
+let tourSlideIndex=0;
 
-function moveSlide(num){
-    tourSlides.style.left=-num*(slidesWidth+slideMargin)+'px';
-    currentIdx=num;
+
+function slidePosition(){
+    for(let i=0; i<tourSlides.length; i++){
+        tourSlides[i].style.left = `${tourWidth * i}px`;
+    }
 }
 
-nextBtn.addEventListener('click',function(){
-    if(currentIdx<slideCount-4){
-        moveSlide(currentIdx+1);
-    }else{
-        moveSlide(0);
-    }
-});
+slidePosition();
 
-prevBtn.addEventListener('click',function(){
-    if(currentIdx>0){
-        moveSlide(currentIdx-1);
-    }else{
-        moveSlide(slideCount-4);
+tourSlide.style.width=tourWidth*tourtotal+'px';
+
+function tourShowSlides(n) {
+    tourSlideIndex = n;
+    if (tourSlideIndex == -1) {
+        tourSlideIndex = tourtotal - 1;
+    } else if (tourSlideIndex === tourtotal) {
+        tourSlideIndex = 0;
     }
+    tourSlide.style.left = -(tourWidth * tourSlideIndex) + 'px';
+}
+
+function plusSlides(n){
+    tourShowSlides(tourSlideIndex += n);
+}
+
+function currentSlide(n) {
+    tourShowSlides(tourSlideIndex = n);
+}
+
+const nextBtn = document.querySelector('.tour__controller .next');
+const prevBtn = document.querySelector('.tour__controller .prev');
+
+nextBtn.addEventListener('click', function () {
+    plusSlides(1);
+});
+prevBtn.addEventListener('click', function () {
+    plusSlides(-1);
 });
 
 // 여행코스
